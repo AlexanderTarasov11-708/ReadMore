@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "996878815631",
+    "firebase_url": "https://readmore-fb60f.firebaseio.com",
+    "project_id": "readmore-fb60f",
+    "storage_bucket": "readmore-fb60f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996878815631:android:73dec5f2a1ea295f",
+        "android_client_info": {
+          "package_name": "com.itis.readmore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996878815631-r81puj992d9ohlidng6dleaa5ei2h85g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itis.readmore",
+            "certificate_hash": "8a561185d4ebed7c13a22dd5500c19f5481a7714"
+          }
+        },
+        {
+          "client_id": "996878815631-tk733v0v4m0ftvfirfdv2qqso4cjtih9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itis.readmore",
+            "certificate_hash": "e26a45e7c83eff0e5eaf34d8fd3ac82621730805"
+          }
+        },
+        {
+          "client_id": "996878815631-pn5l3gfn73df39lqhg1bplfate0dqabh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGqV0aXikh2SAjR4Cl3fUh4xFv1y9dlX0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996878815631-pn5l3gfn73df39lqhg1bplfate0dqabh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
