@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">ReadMore</string>
 
+    <string name="google_books_api">AIzaSyDGqV0aXikh2SAjR4Cl3fUh4xFv1y9dlX0</string>
+    <string name="google_books_user_id">107477651054015778987</string>
+
     <string name="label_google_sign_in">Firebase + Google Sign In</string>
     <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
 
@@ -91,4 +94,7 @@
 
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
+    <string name="book_title">Title</string>
+    <string name="book_author">Author</string>
+    <string name="book_description">Description</string>
 </resources>

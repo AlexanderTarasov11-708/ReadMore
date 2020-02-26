@@ -1,4 +1,4 @@
-package com.itis.readmore
+package com.itis.readmore.ui
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -6,6 +6,7 @@ import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import com.itis.readmore.R
 
 open class BaseActivity : AppCompatActivity() {
 
