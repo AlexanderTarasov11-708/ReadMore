@@ -122,17 +122,29 @@ class SignUpActivity : ScopedAppActivity(), View.OnClickListener, SignUpView {
         hashMap["city"] = user.location
         hashMap["about"] = user.about
         hashMap["email"] = email
-        var rating = "0"
-        launch {
-            rating = (grapi.getAllShelves(user.id)[1].bookCount * 10).toString()
-        }
-        hashMap["rating"] = rating
+        hashMap["grID"] = user.id
+        hashMap["rating"] = (user.shelves[0].bookCount * 10).toString()
         hashMap["imageURL"] = user.imageUrl
 
         dbreference.setValue(hashMap).addOnCompleteListener { task ->
             if (task.isSuccessful) {
+                initializeLibrary(user)
                 updateUI(auth.currentUser)
             }
+        }
+    }
+
+    private fun initializeLibrary(user: User) {
+        for (shelve in user.shelves)
+        {
+            dbreference =
+                FirebaseDatabase.getInstance().getReference("Library").child(shelve.id)
+            val hashMap: HashMap<String, String> = HashMap()
+            hashMap["userId"] = auth.currentUser!!.uid
+            hashMap["id"] = shelve.id
+            hashMap["name"] = shelve.name
+            hashMap["bookCount"] = shelve.bookCount.toString()
+            dbreference.setValue(hashMap)
         }
     }
 

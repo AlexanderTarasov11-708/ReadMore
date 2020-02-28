@@ -5,4 +5,5 @@ import com.arellomobile.mvp.MvpView
 interface LibraryView : MvpView {
     fun hide()
     fun show()
+    fun initRecycler()
 }

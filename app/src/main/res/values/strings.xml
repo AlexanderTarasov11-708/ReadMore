@@ -97,4 +97,5 @@
     <string name="book_title">Title</string>
     <string name="book_author">Author</string>
     <string name="book_description">Description</string>
+    <string name="rating_level_description">После перехода на следующий уровень количество баллов выше умножается на новый уровень \n  Таким образом, на 2 уровне вы получите 50*2=100 баллов за прочитанную книгу</string>
 </resources>

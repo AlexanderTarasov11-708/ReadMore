@@ -2,13 +2,10 @@ package com.itis.readmore
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.cancelChildren
+import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
-abstract class ScopedAppActivity: AppCompatActivity(), CoroutineScope {
+abstract class ScopedAppActivity: AppCompatActivity(), CoroutineScope by MainScope(){
     protected lateinit var job: Job
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main

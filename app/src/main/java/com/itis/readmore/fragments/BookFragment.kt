@@ -35,7 +35,6 @@ class BookFragment : MvpAppCompatFragment(), BookView {
 
     private var root: View? = null
     val list = ArrayList<String>()
-    var sportName: String = "0"
     lateinit var book: MyBook
     lateinit var user: User
 

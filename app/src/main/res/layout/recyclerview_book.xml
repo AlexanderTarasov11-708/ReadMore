@@ -4,29 +4,32 @@
         android:padding="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" android:background="#ffffff">
-    <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/bookImage"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_margin="8dp"/>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_margin="3dp">
         <TextView
-                android:text="@string/book_title"
+                android:text="Library Title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/bookTitle" android:layout_margin="3dp"
-                android:textSize="24sp" android:textColor="@color/colorPrimary" android:textStyle="bold"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/library_title"
+                android:layout_margin="3dp"
+                android:textSize="24sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
         <TextView
-                android:text="@string/book_author"
+                android:text="Library id"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/bookAuthor" android:layout_margin="3dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/library_id"
+                android:layout_margin="3dp"
                 android:textSize="14sp"/>
         <TextView
-                android:text="@string/book_description"
+                android:text="Book Count"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/bookDesc" android:layout_margin="3dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/library_books"
+                android:layout_margin="3dp"
                 android:textSize="14sp"/>
     </LinearLayout>
 </LinearLayout>

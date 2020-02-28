@@ -4,6 +4,7 @@ import java.io.Serializable
 
 class User : Serializable {
     var id: String? = null
+    var grID: String? = null
     var login: String? = null
     var name: String? = null
     var rating: String? = null

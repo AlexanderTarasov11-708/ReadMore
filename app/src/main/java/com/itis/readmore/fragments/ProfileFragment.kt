@@ -11,6 +11,7 @@ import android.webkit.MimeTypeMap
 import android.widget.Toast
 import androidx.annotation.NonNull
 import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.fragment.app.Fragment
 import com.arellomobile.mvp.MvpAppCompatFragment
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
@@ -27,7 +28,9 @@ import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
+import com.itis.readmore.ui.MainActivity
 import com.itis.readmore.views.ProfileView
+import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 import java.util.*
 
@@ -68,6 +71,9 @@ class ProfileFragment : MvpAppCompatFragment(), ProfileView {
     ): View? {
         root = inflater.inflate(R.layout.fragment_profile, null)
 
+        root!!.rating.setOnClickListener {
+            profilePresenter.rating()
+        }
         hide()
 
         dbreference.addValueEventListener(object : ValueEventListener {
@@ -210,6 +216,13 @@ class ProfileFragment : MvpAppCompatFragment(), ProfileView {
                 uploadImage()
             }
         }
+    }
+
+    override fun openFragment(fragment: Fragment) {
+        val transaction = activity!!.supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 
     override fun hide() {
